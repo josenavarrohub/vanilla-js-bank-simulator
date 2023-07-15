@@ -71,6 +71,7 @@ const setBalance = account => account.balance = getDeposits(account.movements) +
 const login = (username, password) => {
   account = getAccount(username, password);
   if (account) {
+    element.login.msg.textContent = 'Please enter your credentials';
     element.login.username.value = element.login.password.value = '';
     element.login.password.blur();
     element.login.send.blur();
